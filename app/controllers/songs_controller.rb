@@ -24,7 +24,7 @@ class SongsController < ApplicationController
   end
 
   def upload
-    SongsWorker.performasync(params[:songs].path)
+    SongsWorker.performasync(params[:file].path)
     redirect_to songs_path
   end
 
